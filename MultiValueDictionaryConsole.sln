@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiValueDictionaryConsole", "MultiValueDictionaryConsole\MultiValueDictionaryConsole.csproj", "{A0D73DEC-43CD-438A-9747-12121C6B7B5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiValueDictionaryConsole.Tests", "MultiValueDictionaryConsole.Tests\MultiValueDictionaryConsole.Tests.csproj", "{DD3A2F18-C955-4BF3-A1AE-A6CB5336441E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0D73DEC-43CD-438A-9747-12121C6B7B5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0D73DEC-43CD-438A-9747-12121C6B7B5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0D73DEC-43CD-438A-9747-12121C6B7B5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0D73DEC-43CD-438A-9747-12121C6B7B5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD3A2F18-C955-4BF3-A1AE-A6CB5336441E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD3A2F18-C955-4BF3-A1AE-A6CB5336441E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD3A2F18-C955-4BF3-A1AE-A6CB5336441E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD3A2F18-C955-4BF3-A1AE-A6CB5336441E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B3AD3D52-F558-4483-90A8-A55E090B30BF}
+	EndGlobalSection
+EndGlobal

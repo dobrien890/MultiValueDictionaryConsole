@@ -1,0 +1,28 @@
+# EXTENSIONS
+*.BACKUP.*
+*_BACKUP_*
+*.BASE.*
+*_BASE_*
+*.docstates
+*.include.css
+*.include.min.css
+*.generated.js
+*.generated.js.map
+*.LOCAL.*
+*_LOCAL_*
+*.lock.json
+*.nupkg
+*.orig
+*.REMOTE.*
+*_REMOTE_*
+*.rej
+*.sln.iml
+*.suo
+*.user
+*.vs
+
+# DIRECTORIES
+**/.git/
+**/bin/
+**/obj/
+**/build/
