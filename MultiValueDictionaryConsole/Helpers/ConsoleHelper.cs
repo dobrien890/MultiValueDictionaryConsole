@@ -1,16 +1,16 @@
 ﻿using System;
 
-namespace MultiValueDictionaryConsole
+namespace MultiValueDictionaryConsole.Helpers
 {
 	internal class ConsoleHelper : IConsoleHelper
 	{
-		public void WriteError(string message) => 
+		public void WriteError(string message) =>
 			WriteWithColor($"ERROR: {message}", ConsoleColor.Red);
 
 		public void WriteSuccess(string message) =>
 			WriteWithColor(message, ConsoleColor.Green);
 
-		public void WriteResponse(string message) => 
+		public void WriteResponse(string message) =>
 			WriteWithColor(message, ConsoleColor.Cyan);
 
 		private void WriteWithColor(string message, ConsoleColor textColor)

@@ -1,4 +1,4 @@
-﻿namespace MultiValueDictionaryConsole
+﻿namespace MultiValueDictionaryConsole.Helpers
 {
 	internal static class ArgumentHelper
 	{

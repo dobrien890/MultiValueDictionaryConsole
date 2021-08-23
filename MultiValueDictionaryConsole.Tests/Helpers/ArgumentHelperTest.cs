@@ -1,7 +1,8 @@
 ﻿using FluentAssertions;
+using MultiValueDictionaryConsole.Helpers;
 using NUnit.Framework;
 
-namespace MultiValueDictionaryConsole.Tests
+namespace MultiValueDictionaryConsole.Tests.Helpers
 {
 	internal class ArgumentHelperTest
 	{

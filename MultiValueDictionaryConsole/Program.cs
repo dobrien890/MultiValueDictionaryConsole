@@ -4,7 +4,6 @@ namespace MultiValueDictionaryConsole
 {
 	class Program
 	{
-		private static CommandTypeProvider commandTypeProvider = new CommandTypeProvider();
 		private static CommandRunner commandExecutor = new CommandRunner();
 
 		static void Main(string[] args)
@@ -13,8 +12,7 @@ namespace MultiValueDictionaryConsole
 			while (true)
 			{
 				var commandText = Console.ReadLine().Trim();
-				var commandType = commandTypeProvider.Get(commandText);
-				commandExecutor.Run(commandType, commandText);
+				commandExecutor.Run(commandText);
 			}
 		}
 

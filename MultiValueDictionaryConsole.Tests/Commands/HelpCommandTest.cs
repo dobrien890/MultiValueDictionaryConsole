@@ -1,6 +1,7 @@
 ﻿using FluentAssertions;
 using Moq;
 using MultiValueDictionaryConsole.Commands;
+using MultiValueDictionaryConsole.Helpers;
 using NUnit.Framework;
 
 namespace MultiValueDictionaryConsole.Tests.Commands

@@ -1,5 +1,6 @@
 ﻿using Moq;
 using MultiValueDictionaryConsole.Commands;
+using MultiValueDictionaryConsole.Helpers;
 using NUnit.Framework;
 
 namespace MultiValueDictionaryConsole.Tests
@@ -9,6 +10,8 @@ namespace MultiValueDictionaryConsole.Tests
 		[Test]
 		public void Run_GivenInvalidCommand_WritesError()
 		{
+			var commandTypeProvider = Mock.Of<ICommandTypeProvider>();
+
 			var expectedErrorMessage = "expectedErrorMessage";
 			var command = Mock.Of<ICommand>(m =>
 				m.IsValid(out expectedErrorMessage) == false
@@ -20,8 +23,8 @@ namespace MultiValueDictionaryConsole.Tests
 
 			var consoleHelper = Mock.Of<IConsoleHelper>();
 
-			new CommandRunner(commandFactory, consoleHelper)
-				.Run(CommandType.Add, "commandText");
+			new CommandRunner(commandTypeProvider, commandFactory, consoleHelper)
+				.Run("commandText");
 
 			Mock.Get(consoleHelper)
 				.Verify(m => m.WriteError(expectedErrorMessage), Times.Once);
@@ -33,6 +36,8 @@ namespace MultiValueDictionaryConsole.Tests
 		[Test]
 		public void Run_GivenValidCommand_ExecutesCommand()
 		{
+			var commandTypeProvider = Mock.Of<ICommandTypeProvider>();
+
 			var unsetErrorMessage = "unsetErrorMessage";
 			var command = Mock.Of<ICommand>(m =>
 				m.IsValid(out unsetErrorMessage) == true
@@ -44,8 +49,8 @@ namespace MultiValueDictionaryConsole.Tests
 
 			var consoleHelper = Mock.Of<IConsoleHelper>();
 
-			new CommandRunner(commandFactory, consoleHelper)
-				.Run(CommandType.Add, "commandText");
+			new CommandRunner(commandTypeProvider, commandFactory, consoleHelper)
+				.Run("commandText");
 
 			Mock.Get(consoleHelper)
 				.Verify(m => m.WriteError(It.IsAny<string>()), Times.Never);

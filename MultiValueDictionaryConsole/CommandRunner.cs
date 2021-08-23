@@ -1,25 +1,33 @@
-﻿namespace MultiValueDictionaryConsole
+﻿using MultiValueDictionaryConsole.Helpers;
+
+namespace MultiValueDictionaryConsole
 {
-	internal class CommandRunner
+	internal class CommandRunner : ICommandRunner
 	{
+		private readonly ICommandTypeProvider commandTypeProvider;
 		private readonly ICommandFactory commandFactory;
 		private readonly IConsoleHelper consoleHelper;
 
 		private MultiValueDictionary multiValueDictionary = new MultiValueDictionary();
 
 		public CommandRunner()
-			: this(new CommandFactory(), new ConsoleHelper())
+			: this(new CommandTypeProvider(), new CommandFactory(), new ConsoleHelper())
 		{
 		}
 
-		public CommandRunner(ICommandFactory commandFactory, IConsoleHelper consoleHelper)
+		public CommandRunner(
+			ICommandTypeProvider commandTypeProvider,
+			ICommandFactory commandFactory,
+			IConsoleHelper consoleHelper)
 		{
+			this.commandTypeProvider = commandTypeProvider;
 			this.commandFactory = commandFactory;
 			this.consoleHelper = consoleHelper;
 		}
 
-		public void Run(CommandType commandType, string commandText)
+		public void Run(string commandText)
 		{
+			var commandType = commandTypeProvider.Get(commandText);
 			var command = commandFactory.Get(commandType, commandText);
 
 			if (!command.IsValid(out var errorMessage))

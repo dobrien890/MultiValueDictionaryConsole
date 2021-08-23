@@ -1,4 +1,6 @@
-﻿namespace MultiValueDictionaryConsole.Commands
+﻿using MultiValueDictionaryConsole.Helpers;
+
+namespace MultiValueDictionaryConsole.Commands
 {
 	internal class KeysCommand : ICommand
 	{

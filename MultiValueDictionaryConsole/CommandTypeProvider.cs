@@ -2,7 +2,7 @@
 
 namespace MultiValueDictionaryConsole
 {
-	internal class CommandTypeProvider
+	internal class CommandTypeProvider : ICommandTypeProvider
 	{
 		public CommandType Get(string commandText)
 		{
